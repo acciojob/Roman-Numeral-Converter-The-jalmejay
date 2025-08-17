@@ -38,12 +38,13 @@ function convertToRoman(num) {
 	
 let result = '';
     
-    for (let [symbol, value] of romanSymbols) {
-        while (num >= value) {
-            result += symbol;
-            num -= value;
-        }
-    }
+    for (let i = 0; i <= 6; i++) {
+                const [symbol, value] = this._obj[i];
+                while (num >= value) {
+                    result += symbol;
+                    num -= value;
+                }
+            }
     
     return result;
 }
