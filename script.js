@@ -10,33 +10,42 @@ function convertToRoman(num) {
     };
 
   //your code here
-	class convertRoman{
-			constructor(number){
-				this.no=number;
-				this._obj=obj;
-			}
+	// class convertRoman{
+	// 		constructor(number){
+	// 			this.no=number;
+	// 			this._obj=obj;
+	// 		}
 
-		 convert() {
-            let num = this.no;
-            let result = '';
+	// 	 convert() {
+ //            let num = this.no;
+ //            let result = '';
 
-            for (let i = 0; i <= 6; i++) {
-                const [symbol, value] = this._obj[i];
-                while (num >= value) {
-                    result += symbol;
-                    num -= value;
-                }
-            }
+ //            for (let i = 0; i <= 6; i++) {
+ //                const [symbol, value] = this._obj[i];
+ //                while (num >= value) {
+ //                    result += symbol;
+ //                    num -= value;
+ //                }
+ //            }
 
-            return result;
-        }
+ //            return result;
+ //        }
 		
 	}
 
-	const converter= new convertRoman(num)
-	return converter.convert();
+	// const converter= new convertRoman(num)
+	// return converter.convert();
 	
-
+let result = '';
+    
+    for (let [symbol, value] of romanSymbols) {
+        while (num >= value) {
+            result += symbol;
+            num -= value;
+        }
+    }
+    
+    return result;
 }
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
 
