@@ -36,10 +36,10 @@ function convertToRoman(num) {
 	// const converter= new convertRoman(num)
 	// return converter.convert();
 	
-let result = '';
+            let result = '';
     
-    for (let i = 0; i <= 6; i++) {
-                const [symbol, value] = this._obj[i];
+           for (let i = 0; i <= 6; i++) {
+                const [symbol, value] = obj[i];
                 while (num >= value) {
                     result += symbol;
                     num -= value;
